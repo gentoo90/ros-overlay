@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    This package contains a minimal evaluation bundle of RTI Connext DDS,
+
+    The package includes all the C/C++ libraries, header files, and tools
+    required to build and run an application with RTI Connext DDS.
+
+    The software is released under RTI's Non-Commercial and Pre-Commercial
+    License Agreement.
+  </longdescription>
+</pkgmetadata>
