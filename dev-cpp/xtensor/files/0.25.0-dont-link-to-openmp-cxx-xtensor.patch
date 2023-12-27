@@ -1,0 +1,16 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 7535649..f3d310f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -240,11 +240,6 @@ if(BUILD_BENCHMARK)
+     add_subdirectory(benchmark)
+ endif()
+ 
+-if(XTENSOR_USE_OPENMP)
+-    # Link xtensor itself to OpenMP to propagate to user projects
+-    target_link_libraries(xtensor INTERFACE OpenMP::OpenMP_CXX_xtensor)
+-endif()
+-
+ # Installation
+ # ============
+ 
