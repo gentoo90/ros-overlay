@@ -18,9 +18,14 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	dev-build/cmake
+	dev-cpp/cpptoml
 	dev-vcs/git
 "
 
 SLOT="0"
 ROS_DISTRO="jazzy"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+PATCHES=(
+	"${FILESDIR}/disable-cpptoml-download.patch"
+)
