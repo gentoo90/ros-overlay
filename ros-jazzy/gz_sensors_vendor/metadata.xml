@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Vendor package for: gz-sensors8 8.0.1
+
+    Gazebo Sensors : Sensor models for simulation
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>addisuzt@intrinsic.ai</email>
+      <name>Addisu Z. Taddese</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/gz_sensors_vendor/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

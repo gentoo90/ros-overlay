@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Utilities to interface ROS with Beluga.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>glpuga@ekumenlabs.com</email>
+      <name>Gerardo Puga</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/beluga/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

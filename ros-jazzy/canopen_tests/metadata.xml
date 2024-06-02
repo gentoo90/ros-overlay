@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Package with tests for ros2_canopen
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>cmh@ipa.fraunhofer.de</email>
+      <name>Christoph Hellmann Santos</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ros2_canopen/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

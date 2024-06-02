@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Support for transporting PointCloud2 messages in compressed format and plugin interface for implementing additional PointCloud2 transports.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>alejandro@openrobotics.org</email>
+      <name>Alejandro Hernández</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/point_cloud_transport/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

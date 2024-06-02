@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    Steering controller with tricycle kinematics. Rear fixed wheels are powering the vehicle and front wheel is steering.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>bence.magyar.robotics@gmail.com</email>
+      <name>Bence Magyar</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/ros2_controllers/issues</bugs-to>
+  </upstream>
+</pkgmetadata>

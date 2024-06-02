@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <longdescription>
+    ROS 2 message interface for Actuators.
+  </longdescription>
+  <maintainer type="person">
+    <email>hunterlallen@protonmail.com</email>
+    <name>Hunter L. Allen</name>
+  </maintainer>
+  <upstream>
+    <maintainer status="active">
+      <email>bperseghetti@rudislabs.com</email>
+      <name>Benjamin Perseghetti</name>
+    </maintainer>
+    <bugs-to>https://github.com/ros2-gbp/actuator_msgs/issues</bugs-to>
+  </upstream>
+</pkgmetadata>
