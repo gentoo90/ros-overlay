@@ -27,3 +27,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="jazzy"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+PATCHES=(
+	"${FILESDIR}/0.10.4-dont-install-readme.patch"
+)

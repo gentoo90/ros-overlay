@@ -1,0 +1,11 @@
+diff --git a/docs/CMakeLists.txt b/docs/CMakeLists.txt
+index efa8ec7..b9a684d 100644
+--- a/docs/CMakeLists.txt
++++ b/docs/CMakeLists.txt
+@@ -29,6 +29,5 @@ install(
+         ${CMAKE_CURRENT_SOURCE_DIR}/../CYCLONEDDS_QUALITY_DECLARATION.md
+         ${CMAKE_CURRENT_SOURCE_DIR}/../LICENSE
+         ${CMAKE_CURRENT_SOURCE_DIR}/../NOTICE.md
+-        ${CMAKE_CURRENT_SOURCE_DIR}/../README.md
+         ${CMAKE_CURRENT_SOURCE_DIR}/../CHANGELOG.rst
+   DESTINATION ${CMAKE_INSTALL_DOCDIR})
