@@ -8,7 +8,10 @@ inherit ros-cmake
 
 DESCRIPTION="Foonathan/memory vendor package for Fast-RTPS."
 HOMEPAGE="https://index.ros.org/p/foonathan_memory_vendor/#jazzy"
-SRC_URI="https://github.com/ros2-gbp/${PN}-release/archive/release/jazzy/${PN}/1.3.1-3.tar.gz -> ${PN}-jazzy-release-${PV}.tar.gz"
+SRC_URI="
+	https://github.com/foonathan/memory/archive/refs/tags/v0.7-3.tar.gz -> foonathan-memory-0.7-3.tar.gz
+	https://github.com/ros2-gbp/${PN}-release/archive/release/jazzy/${PN}/1.3.1-3.tar.gz
+ -> ${PN}-jazzy-release-${PV}.tar.gz"
 
 LICENSE="( Apache-2.0 Zlib )"
 
@@ -30,3 +33,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="jazzy"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+PATCHES=(
+	"${FILESDIR}/1.3.1-no-download.patch"
+)
