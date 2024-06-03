@@ -8,7 +8,10 @@ inherit ament-cmake
 
 DESCRIPTION="mcap vendor package"
 HOMEPAGE="https://index.ros.org/p/mcap_vendor/#jazzy"
-SRC_URI="https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/${PN}/0.26.3-1.tar.gz -> ${PN}-jazzy-release-${PV}.tar.gz"
+SRC_URI="
+	https://github.com/foxglove/mcap/archive/refs/tags/releases/cpp/v1.3.0.tar.gz -> mcap-1.3.0.gh.tar.gz
+	https://github.com/ros2-gbp/rosbag2-release/archive/release/jazzy/${PN}/0.26.3-1.tar.gz
+ -> ${PN}-jazzy-release-${PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 
@@ -25,3 +28,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 ROS_DISTRO="jazzy"
 ROS_PREFIX="opt/ros/${ROS_DISTRO}"
+
+PATCHES=(
+	"${FILESDIR}/0.26.3-no-download.patch"
+)
