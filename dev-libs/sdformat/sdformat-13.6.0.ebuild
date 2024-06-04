@@ -22,6 +22,7 @@ RDEPEND="
 	>=dev-libs/urdfdom-1:=
 	dev-libs/tinyxml
 	dev-libs/boost:=
+	dev-libs/gz-utils:2=
 	sci-libs/gz-math:7=
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}"

@@ -22,16 +22,20 @@ RDEPEND="
 	sci-libs/gz-math:7=
 	sci-libs/gz-common:5=
 	dev-libs/gz-utils:2=
-	media-libs/freeimage:=
 	media-libs/libglvnd
 	optix? (
 		dev-libs/optix
 		dev-util/nvidia-cuda-toolkit
+		media-libs/freeimage:=
 	)"
 DEPEND="${RDEPEND}
 	dev-build/gz-cmake:3"
 BDEPEND="
 	dev-build/gz-cmake:3"
+
+PATCHES=(
+	"${FILESDIR}/7.4.2-position-independent.patch"
+)
 
 src_configure() {
 	local mycmakeargs=(

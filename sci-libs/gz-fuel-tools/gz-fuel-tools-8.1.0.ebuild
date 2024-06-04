@@ -28,6 +28,7 @@ RDEPEND="
 	net-misc/curl:=
 	sci-electronics/gz-tools:2
 	sci-libs/gz-common:5=
+	sci-libs/gz-math:7=
 	dev-libs/gz-utils:2="
 DEPEND="${RDEPEND}
 	dev-build/gz-cmake:3"

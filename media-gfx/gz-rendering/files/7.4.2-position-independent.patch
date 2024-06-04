@@ -1,0 +1,30 @@
+From d323506a29be0f3c60293be64d5154ea818bf08c Mon Sep 17 00:00:00 2001
+From: Michael Carroll <mjcarroll@intrinsic.ai>
+Date: Thu, 4 Jan 2024 10:04:40 -0600
+Subject: [PATCH] Correctly set position-independent code (#950)
+
+This was broken by https://github.com/gazebosim/gz-cmake/pull/399, since
+we dropped the gazebo-specific flag, we can use native CMake mechanism
+for marking this library position-independent.
+
+Signed-off-by: Michael Carroll <mjcarroll@intrinsic.ai>
+---
+ ogre2/src/terrain/Terra/CMakeLists.txt | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+diff --git a/ogre2/src/terrain/Terra/CMakeLists.txt b/ogre2/src/terrain/Terra/CMakeLists.txt
+index c4686fadf..3da281652 100644
+--- a/ogre2/src/terrain/Terra/CMakeLists.txt
++++ b/ogre2/src/terrain/Terra/CMakeLists.txt
+@@ -7,10 +7,8 @@ file( GLOB_RECURSE TERRA_SOURCES
+ )
+ 
+ add_library(${PROJECT_NAME} STATIC ${TERRA_SOURCES})
++set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
+ 
+-if(GZ_ADD_fPIC_TO_LIBRARIES AND NOT _gz_add_library_INTERFACE)
+-  target_compile_options(${PROJECT_NAME} PRIVATE -fPIC)
+-endif()
+ 
+ # disable all warnings for Terra
+ if (UNIX)

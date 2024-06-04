@@ -36,8 +36,6 @@ RDEPEND="
 	dev-libs/urdfdom:=
 	>=media-libs/assimp-3.0.0:=
 	media-libs/freeglut
-	media-libs/imgui:=[glut(-),opengl(-)]
-	media-libs/lodepng
 	>=sci-libs/libccd-2.0
 	>=sci-libs/fcl-0.2.9:=
 	sci-libs/flann
@@ -67,11 +65,10 @@ BDEPEND="
 
 RESTRICT="!test? ( test )"
 PATCHES=(
-	"${FILESDIR}/${P}-no-deprecated-examples.patch"
+	"${FILESDIR}/${PN}-6.13.0-no-deprecated-examples.patch"
 	"${FILESDIR}/${PN}-respect-ldflags.patch"
-	"${FILESDIR}/${P}-respect-cflags.patch"
-	"${FILESDIR}/${P}-use-system-gtest.patch"
-	"${FILESDIR}/${P}-use-system-lodepng-imgui.patch"
+	"${FILESDIR}/${PN}-6.13.0-respect-cflags.patch"
+	"${FILESDIR}/${PN}-6.13.0-use-system-gtest.patch"
 )
 REQUIRED_USE="
 	python? (
@@ -87,7 +84,6 @@ pkg_setup() {
 src_prepare() {
 	# delete bundled libs
 	rm -r unittests/gtest || die
-	rm -r dart/external/{imgui,lodepng} || die
 	# delete deprecated examples
 	rm -r examples/deprecated_examples || die
 	edos2unix unittests/CMakeLists.txt

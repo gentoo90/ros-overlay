@@ -45,7 +45,7 @@ BDEPEND="
 	)"
 
 PATCHES=(
-	"${FILESDIR}/${PV}-fix-python-site-packages-path.patch"
+	"${FILESDIR}/7.6.0-fix-python-site-packages-path.patch"
 )
 
 src_configure() {
