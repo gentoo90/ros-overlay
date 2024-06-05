@@ -15,12 +15,13 @@ SRC_URI="https://osrf-distributions.s3.amazonaws.com/gz-math/releases/${P}.tar.b
 LICENSE="Apache-2.0"
 SLOT="$(ver_cut 1)"
 KEYWORDS="~amd64"
-IUSE="python"
+IUSE="python ruby"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	dev-libs/gz-utils:2=
-	python? ( ${PYTHON_DEPS} )"
+	python? ( ${PYTHON_DEPS} )
+	ruby? ( dev-lang/ruby:* )"
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:3
 	dev-build/gz-cmake:3"
@@ -30,11 +31,13 @@ BDEPEND="
 		$(python_gen_cond_dep '
 			dev-python/pybind11[${PYTHON_USEDEP}]
 		')
-	)"
+	)
+	ruby? ( dev-lang/swig )"
 
 src_configure() {
 	local mycmakeargs=(
 		-DSKIP_PYBIND11=$(usex python OFF ON)
+		-DSKIP_SWIG=$(usex ruby OFF ON)
 		-DUSE_SYSTEM_PATHS_FOR_PYTHON_INSTALLATION=ON
 		-DPython3_EXECUTABLE="${PYTHON}"
 	)
